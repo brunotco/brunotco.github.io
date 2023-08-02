@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Lato, sans-serif;
+    background-color: #282828;
+}
+
+a {
+    cursor: pointer;
+}
+
+.header-main {
+    width: 100%;
+    height: 60px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-main-logo {
+    width: fit-content;
+    height: 100%;
+    padding-left: 60px;
+    display: flex;
+    & img {
+        height: 80%;
+        align-self: center;
+        border-radius: 50em;
+    }
+}
+
+.header-main-nav {
+    width: fit-content;
+    height: 100%;
+    & ul {
+        list-style: none;
+        margin-left: 30px;
+        margin-top: 0;
+        padding: 0;
+        & li {
+            display: inline;
+            float: left;
+            & a {
+                padding: 0 10px;
+                line-height: 60px;
+                color: black;
+                display: block;
+                height: 100%;
+                font-weight: 600;
+                text-decoration: none;
+                &:hover {
+                    color: #c9651d;
+                }
+            }
+        }
+    }
+}
+
+.header-main-sm {
+    width: fit-content;
+    height: 100%;
+    padding-right: 60px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-main-sm-logo {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 500ms ease-in-out;
+    &:hover {
+        transform: scale(1.5);
+    }
+    &.sm-gh {
+        background-image: url(../assets/github.png);
+    }
+    &.sm-in {
+        background-image: url(../assets/linkedin.png);
+    }
+}
