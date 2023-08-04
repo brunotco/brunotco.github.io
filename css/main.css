@@ -11,7 +11,7 @@ a {
 .header-main {
     width: 100%;
     height: 60px;
-    background-color: whitesmoke;
+    background-color: rgb(197, 197, 197);
     display: flex;
     justify-content: space-between;
 }
