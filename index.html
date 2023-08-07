@@ -3,32 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/logo.jpg" sizes="16x16" type="image/jpg">
+    <title>Presentation</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header class="header-main">
-        <div class="header-main-logo">
-            <img src="assets/logo.jpg" alt="logo">
-            <!-- To center take outside logo and adjust -->
-            <nav class="header-main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="header-main-sm">
-            <a target="_blank" href="https://github.com/brunotco">
-                <div class="header-main-sm-logo sm-gh"></div>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="assets/logo.jpg" alt="logo">
             </a>
-            <a target="_blank" href="https://linkedin.com/in/brunotco/">
-                <div class="header-main-sm-logo sm-in"></div>
+            <ul>
+                <li><a href="#">Menu1</a></li>
+                <li>
+                    <a href="#">Menu2</a>
+                    <ul>
+                        <li><a href="#">Sub Menu1</a></li>
+                        <li><a href="#">Sub Menu2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Menu3</a></li>
+            </ul>
+        </nav>
+        <div class="sm-links">
+            <a href="#">
+                <img src="assets/github.png" alt="github">
+            </a>
+            <a href="#">
+                <img src="assets/linkedin.png" alt="linkedin">
             </a>
         </div>
     </header>
