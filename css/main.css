@@ -4,6 +4,7 @@
 }
 
 :root {
+    --menu-count: 3;
     --menu-height: 100px;
     --menu-elements: max(50px, calc(var(--menu-height) - 30px));
     --menu-padding: 40px;
@@ -20,6 +21,10 @@ body {
     margin: 0;
     font-family: Lato, sans-serif;
     background-color: #282828;
+}
+
+.mobile-menu {
+    display: none;
 }
 
 .header-main {
@@ -117,6 +122,128 @@ body {
                 &:hover {
                     transform: scale(1.5);
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header-main {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 200;
+        background-color: lightgray;
+        border-radius: 10px;
+        & img {
+            height: 80%;
+            align-self: center;
+        }
+    }
+
+    .header-main {
+        height: 100vh;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0;
+        justify-content: flex-start;
+        & nav {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 80vh;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: stretch;
+            overflow-y: auto;
+            overflow-x: hidden;
+            & .logo {
+                height: 30%;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                & img {
+                    height: 60%;
+                    align-self: center;
+                }
+            }
+            & ul {
+                height: 70%;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-content: space-between;
+                & li {
+                    width: 100%;
+                    height: calc(calc(100% / var(--menu-count)) - 1%);
+                    padding: 0;
+                    margin: 0;
+                    border-top: 1px solid white;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    flex-direction: column;
+                    justify-content: center;
+                    transition: all ease-in-out 200ms;
+                    &:nth-last-child(1) {
+                        border-bottom: 1px solid white;
+                    }
+                    &:hover {
+                        background-color: var(--menu-color-clear);
+                    }
+                    & a {
+                        width: 100%;
+                        height: fit-content;
+                        padding: 0;
+                        margin: 0;
+                        text-align: center;
+                        font-size: 2.5rem;
+                        &:hover {
+                            color: var(--menu-text-clear);
+                        }
+                    }
+                    & ul {
+                        flex-wrap: nowrap;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 2000;
+                        & li {
+                            height: fit-content;
+                            display: block;
+                            background-color: var(--menu-hover-clear);
+                            & a {
+                                line-height: var(--menu-elements);
+                                &:hover {
+                                    background-color: var(--menu-hover-clear);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        & .sm-links {
+            width: 100%;
+            height: 20vh;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            & a {
+                height: 30%;
+                margin: 0 2%;
+                padding: 0;
             }
         }
     }
